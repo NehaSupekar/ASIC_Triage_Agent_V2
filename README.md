@@ -29,35 +29,39 @@ Open a terminal and download the local weights for the specialized agent model:
 
 ```bash
 ollama run llama3.2:1b
+```
 Verify that Ollama is running in the background.
 2. Clone and Install Dependencies
 Navigate into the project directory and install the necessary Python packages:
-Bash
+```Bash
 pip3 install fastapi uvicorn chromadb httpx watchdog streamlit pandas
+```
 3. Initialize the Application Stack
 You will need three terminal windows open to run the full automated system:
 Terminal 1: The Local Inference Server
-Bash
+```Bash
 ollama serve
+```
 Terminal 2: The Event-Driven Backend Engine
-Bash
+```Bash
 python3 -m uvicorn server:app --reload --port 8001
+```
 Terminal 3: The Analytics Frontend Dashboard
-Bash
+```Bash
 python3 -m streamlit run app.py
+```
 🔬 Verifying the Triage Engine Pipeline
 To observe the pipeline executing completely in real-time, generate a fresh failure entry:
 Create a new log file inside the ./logs/ directory named test_protocol_deadlock.log.
 Paste the following mock hardware error into it and save:
-Plaintext
+```Plaintext
 [CRITICAL] 2026-06-18 17:40:22 - DMA_Controller_A
 Descriptor Corruption: Core_0 memory read mismatch at address 0x0000FFCC.
 AXI-Stream Interface dropped to State_Deadlock due to backpressure timeout.
+```
 Status: Data cache coherence error across processing blocks. Missing ACK signal.
 Observe: The backend terminal will fire an event handler, compute a high distance delta, map it to a brand-new cluster, and print out the multi-agent consensus report.
 Visualize: Open your browser to the Streamlit local address, hit Force Refresh Database, and select the new cluster to read your technical triage dossier visually.
 
 ---
-
-### 🚀 Push to GitHub
 
