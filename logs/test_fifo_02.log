@@ -1,0 +1,5 @@
+[2026-06-18 10:05:44] [ERROR] Simulation failed at 9200ns. 
+Static Timing Analysis Violation: SETUP VIOLATION.
+Source: reg_file_inst/data_out_reg[3]
+Destination: fifo_buffer_inst/mem_reg[3]
+Slack: -0.128 ns (METADATA_ERR_02)
