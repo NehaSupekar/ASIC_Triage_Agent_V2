@@ -18,6 +18,8 @@ graph TD
     style D fill:#bbf,stroke:#333,stroke-width:2px
     style F fill:#bfb,stroke:#333,stroke-width:2px
 
+
+
 🛠️ Engineering Journey & Core Challenges
 📌 Problem Statement & Objective
 In modern ASIC design verification, analyzing thousands of raw Electronic Design Automation (EDA) simulation failure logs is a massive operational bottleneck. Standard cloud-based AI triage agents are unusable in high-stakes hardware environments due to strict corporate sandboxes and IP data-privacy firewalls.
